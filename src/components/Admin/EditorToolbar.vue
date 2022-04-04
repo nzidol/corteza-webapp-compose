@@ -61,6 +61,7 @@
           variant="light"
           size="lg"
           class="ml-2"
+          data-test-id="button-save-and-close"
           @click.prevent="$emit('saveAndClose')"
         >
           {{ $t('label.saveAndClose') }}
@@ -71,6 +72,7 @@
           variant="primary"
           size="lg"
           class="ml-2"
+          data-test-id="button-save"
           @click.prevent="$emit('save')"
         >
           {{ $t('label.save') }}

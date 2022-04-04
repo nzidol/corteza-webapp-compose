@@ -25,6 +25,7 @@
               variant="primary"
               size="lg"
               class="mr-1 float-left"
+              data-test-id="button-create"
             >
               {{ $t('create') }}
             </b-btn>
