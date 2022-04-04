@@ -158,9 +158,14 @@
                   xl="4"
                 >
                   <b-form-group>
-                    <label class="text-primary">{{ $t('newLabel') }}</label>
+                    <label
+                      class="text-primary"
+                    >
+                      {{ $t('newLabel') }}
+                    </label>
                     <b-form-input
                       v-model="module.name"
+                      data-test-id="input-module-name"
                       required
                       :placeholder="$t('newPlaceholder')"
                     />
@@ -175,8 +180,9 @@
                     <label class="text-primary">{{ $t('general.label.handle') }}</label>
                     <b-form-input
                       v-model="module.handle"
-                      :state="handleState"
+                      data-test-id="input-module-handle"
                       class="mb-2"
+                      :state="handleState"
                       :placeholder="$t('general.placeholder.handle')"
                     />
                     <b-form-invalid-feedback :state="handleState">
@@ -252,6 +258,7 @@
                         v-for="(field, index) in module.fields"
                         :key="index"
                         v-model="module.fields[index]"
+                        :field-index="index"
                         :can-grant="namespace.canGrant"
                         :has-records="hasRecords"
                         :module="module"
@@ -264,6 +271,7 @@
                       <td colspan="1" />
                       <td colspan="7">
                         <b-button
+                          data-test-id="button-field-add"
                           class="mb-5"
                           variant="primary"
                           @click="handleNewField"

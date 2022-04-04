@@ -13,10 +13,11 @@
       <b-form-input
         v-model="value.name"
         required
+        type="text"
+        :data-test-id="`field-${fieldIndex}-name`"
+        class="form-control"
         :readonly="disabled"
         :state="fieldState"
-        type="text"
-        class="form-control"
       />
     </td>
     <td>
@@ -24,6 +25,7 @@
         <b-form-input
           v-model="value.label"
           type="text"
+          :data-test-id="`field-${fieldIndex}-label`"
           class="form-control"
         />
         <b-input-group-append>
@@ -41,6 +43,7 @@
       <b-input-group class="field-type">
         <b-select
           v-model="value.kind"
+          :data-test-id="`field-${value.kind.toLowerCase()}-type`"
           :disabled="disabled"
         >
           <option
@@ -149,6 +152,11 @@ export default {
     isDuplicate: {
       type: Boolean,
       required: false,
+    },
+
+    fieldIndex: {
+      type: Number,
+      default: 0,
     },
   },
 

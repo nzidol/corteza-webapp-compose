@@ -28,6 +28,7 @@
                       variant="primary"
                       size="lg"
                       class="mr-1 float-left"
+                      data-test-id="button-create"
                       :to="{ name: 'admin.modules.create' }"
                     >
                       {{ $t('createLabel') }}

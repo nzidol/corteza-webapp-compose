@@ -35,6 +35,7 @@
           v-if="isAdminPage"
           variant="light"
           class="w-100 mb-2"
+          data-test-id="button-public"
           :to="{ name: 'pages', params: { slug: namespace.slug } }"
         >
           {{ $t('publicPages') }}
@@ -44,6 +45,7 @@
           v-else-if="namespace.canManageNamespace"
           variant="light"
           class="w-100 mb-2"
+          data-test-id="button-admin"
           :to="{ name: 'admin.modules', params: { slug: namespace.slug } }"
         >
           {{ $t('adminPanel') }}
