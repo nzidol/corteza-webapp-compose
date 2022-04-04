@@ -157,8 +157,9 @@
                   />
                   <b-button
                     variant="link"
-                    :to="{name: 'admin.modules.record.list', params: { moduleID: m.moduleID }}"
+                    data-test-id="button-all-records"
                     class="text-dark text-decoration-none"
+                    :to="{name: 'admin.modules.record.list', params: { moduleID: m.moduleID }}"
                   >
                     {{ $t('allRecords.label') }}
                   </b-button>
