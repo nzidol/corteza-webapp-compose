@@ -72,10 +72,15 @@
                   cols="12"
                   md="6"
                 >
-                  <label class="text-primary">{{ $t('label.handle') }}</label>
+                  <label
+                    class="text-primary"
+                  >
+                    {{ $t('label.handle') }}
+                  </label>
                   <b-form-input
                     v-model="page.handle"
                     :state="handleState"
+                    data-test-id="input-handle"
                     class="mb-2"
                     :placeholder="$t('block.general.placeholder.handle')"
                   />

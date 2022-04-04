@@ -10,6 +10,7 @@
             :key="type.label"
             :disabled="!recordPage && type.recordPageOnly"
             button
+            :data-test-id="`select-${labelType(type.label)}-block`"
             @click="$emit('select', type.block)"
             @mouseover="current = type.image"
           >
@@ -130,6 +131,16 @@ export default {
         },
       ],
     }
+  },
+
+  methods: {
+    labelType (t) {
+      t = t.toLowerCase()
+      if (t.includes(' ')) {
+        return t.replace(' ', '-')
+      }
+      return t
+    },
   },
 }
 </script>

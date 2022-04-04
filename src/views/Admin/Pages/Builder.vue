@@ -159,6 +159,7 @@
           variant="light"
           size="lg"
           class="mr-1 float-right"
+          data-test-id="button-add-block"
         >
           + {{ $t('build.addBlock') }}
         </b-button>

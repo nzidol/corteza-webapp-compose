@@ -1,6 +1,9 @@
 <template>
   <div>
-    <b-tab :title="$t('recordList.label')">
+    <b-tab
+      data-test-id="block-record-list"
+      :title="$t('recordList.label')"
+    >
       <b-form-group
         class="form-group"
         :label="$t('general.module')"
@@ -11,6 +14,7 @@
           text-field="name"
           value-field="moduleID"
           required
+          data-test-id="select-module"
         />
         <b-form-text class="text-secondary small">
           <i18next

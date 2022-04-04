@@ -29,6 +29,7 @@
                       v-model="page.title"
                       required
                       type="text"
+                      data-test-id="input-page-name"
                       class="h-100"
                       :placeholder="$t('newPlaceholder')"
                     />
@@ -37,6 +38,7 @@
                         type="submit"
                         variant="primary"
                         size="lg"
+                        data-test-id="button-create-page"
                         @click="handleAddPageFormSubmit"
                       >
                         {{ $t('createLabel') }}
