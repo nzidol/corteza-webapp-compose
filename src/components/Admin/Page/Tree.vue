@@ -51,6 +51,7 @@
               v-if="item.canUpdatePage"
               :to="{name: 'admin.pages.builder', params: { pageID: item.pageID }}"
               class="btn btn-light mr-2"
+              data-test-id="button-page-builder"
             >
               {{ $t('block.general.label.pageBuilder') }}
             </router-link>
@@ -59,6 +60,7 @@
                 v-if="item.blocks && item.blocks.length >= 1"
                 :to="{name: 'page', params: { pageID: item.pageID }}"
                 class="btn"
+                data-test-id="button-page-view"
               >
                 {{ $t('view') }}
               </router-link>

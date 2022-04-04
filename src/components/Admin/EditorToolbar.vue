@@ -15,6 +15,7 @@
           variant="link"
           :to="backLink"
           class="text-dark back mr-auto"
+          data-test-id="button-back-without-save"
         >
           <font-awesome-icon
             :icon="['fas', 'chevron-left']"
@@ -39,6 +40,7 @@
           size="lg"
           size-confirm="lg"
           variant="danger"
+          data-test-id="button-delete"
           :title="deleteTooltip"
           :borderless="false"
           @confirmed="$emit('delete')"
@@ -51,6 +53,7 @@
           variant="light"
           size="lg"
           class="ml-2"
+          data-test-id="button-clone"
           @click="$emit('clone')"
         >
           {{ $t('label.clone') }}

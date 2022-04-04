@@ -1,5 +1,6 @@
 <template>
   <b-tab
+    data-test-id="block-record"
     :title="$t('record.label')"
   >
     <fieldset
